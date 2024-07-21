@@ -1,0 +1,20 @@
+#1 Задача
+
+population2 = []
+countries = ['Russia', 'Germany', 'UK']
+capitals = ['Moscow', 'Berlin', 'London']
+population = ['145_934_462', '67_886_011', '80_345_321']
+for i in population:
+    i = int(i)
+    population2.append(i)
+zipped = list(zip(countries, capitals, population2))
+print(f'{zipped[0][1]} is the capital of {zipped[0][0]}, population equal {zipped[0][2]} people.')
+print(f'{zipped[1][1]} is the capital of {zipped[1][0]}, population equal {zipped[1][2]} people.')
+print(f'{zipped[2][1]} is the capital of {zipped[2][0]}, population equal {zipped[2][2]} people.')
+
+
+
+#2 Задача
+
+def ignore_command(command):
+    for i in ['alias', 'configuration', 'ip', 'sql', 'select', 'update', 'exec', 'del', 'truncate']: return True if i in command else False
